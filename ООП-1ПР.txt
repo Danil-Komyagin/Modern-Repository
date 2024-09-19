@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Specialized;
+using System.Data;
+
+namespace OOP{
+    class program
+    {
+        static void Main(string[] args)
+        {
+            double m, n;
+            
+            Console.WriteLine("Введите m");
+            m = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите n");
+            n = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("m = " + m + ", n = " + n);
+            
+            bool result;
+            
+            result = m/n<n--;
+            
+            Console.WriteLine("Выполнение операции m/n<n--, результат = " + result + " m = " + m + " n = " + n);
+             
+            result = m+n++>n+m;
+            
+            Console.WriteLine("Выполнение операции m+n++>n+m, результат = " + result + " m = " + m + " n = " + n);
+ 
+            Console.WriteLine("Введите х:");
+            double x = Convert.ToDouble(Console.ReadLine());
+            
+            double e = (double)Math.Pow(x, 5);
+            double res = e * (double)Math.Sqrt(Math.Abs(x - 1)) + (double)Math.Abs(25 - e);
+            
+            Console.WriteLine("Результат = " + res);
+
+            //////////////////////////////////////////////////////////////////////////////
+            //
+            bool f;
+            Console.WriteLine("Введите координату х: ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите координату y: ");
+            double y = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("x = " + x + ", y = " + y);
+            
+            f = ((y >= (-1 * x / 7 - 1)) && (y <= 0) && (x <= 0) && (x >= -7));
+            if (f) { 
+                Console.WriteLine("Координата принадлежит фигуре");
+            }
+            else { Console.WriteLine("Координата не принадлежит фигуре"); }
+           
+            //////////////////////////////////////////////////////////////////
+              
+            float a = 1000f;
+            float b = 0.0001f;
+            
+            double a = 1000;
+            double b = 0.0001;
+            
+            float result = ((float)Math.Pow(a + b, 3) - ((float)Math.Pow(a,3) + 3 * (float)Math.Pow(a, 2) * b)) / (3 * a * (float)Math.Pow(b, 2) + (float)Math.Pow(b, 3));
+            
+            double result2 = ((double)Math.Pow(a + b, 3) - ((double)Math.Pow(a, 3) + 3 * (double)Math.Pow(a, 2) * b)) / (3 * a * (double)Math.Pow(b, 2) + (double)Math.Pow(b, 3));
+            
+            
+            Console.WriteLine(result2);
+            
+            // Закомментируй ненужный код, оставь только нужное, потом - так же с другой частью
+        }
+    }
+}
